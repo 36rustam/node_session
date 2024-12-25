@@ -5,7 +5,7 @@ const hbsExpress = require('express-handlebars');
 // routes
 const routHome=require('./routes/rout_home.js');
 
-const PORT =process.env.PORT||459451;
+const PORT =process.env.PORT;
 const app = express();
 
 
@@ -36,4 +36,4 @@ app.use(express.urlencoded({expended:true}));
 // routes
 app.use('/', routHome);
 
-app.listen(PORT);
+app.listen(PORT,()=>{console.log(`http://localhost:${PORT}`);});
