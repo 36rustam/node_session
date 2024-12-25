@@ -6,7 +6,7 @@ router.get(
     '/',
     (req,res)=>{
         res.render(
-            'index.hbs',
+            'index',
             {
                 title:'home page',
                 esHome:true,
