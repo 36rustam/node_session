@@ -36,4 +36,5 @@ app.use(express.urlencoded({expended:true}));
 // routes
 app.use('/', routHome);
 
-app.listen(PORT,()=>{console.log(`http://localhost:${PORT}`);});
+// app.listen(PORT,()=>{console.log(`http://localhost:${PORT}`);});
+app.listen();
