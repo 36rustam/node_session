@@ -1,0 +1,25 @@
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.content{
+    flex: 1 0 auto;
+}
+footer{
+    flex: 0 0 auto;
+}
+ 
+.nav-pos{
+    position: sticky;
+    top: 0;
+}
+
+
+.active{
+    font-weight: 700;
+};
+
