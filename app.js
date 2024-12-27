@@ -7,6 +7,8 @@ const hbsExpress = require('express-handlebars');
 const routHome=require('./routes/rout_home.js');
 const routProductos=require('./routes/productos.js');
 const routContactos=require('./routes/contactos.js');
+// rout 404
+const rout404 = require('./routes/rout_404.js');
 
 const PORT =process.env.PORT;
 const app = express();
@@ -43,6 +45,8 @@ app.use(express.urlencoded({expended:true}));
 app.use('/', routHome);
 app.use('/productos', routProductos);
 app.use('/contactos', routContactos);
+// 404
+app.use('/*', rout404);
 
 // app.listen(PORT,()=>{console.log(`http://localhost:${PORT}`);});
 app.listen(PORT,()=>{console.log(`http://localhost:${PORT}`);});
