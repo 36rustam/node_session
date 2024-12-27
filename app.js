@@ -8,7 +8,7 @@ const routHome=require('./routes/rout_home.js');
 const routProductos=require('./routes/productos.js');
 const routContactos=require('./routes/contactos.js');
 
-const PORT =process.env.PORT || 3000;
+const PORT =process.env.PORT;
 const app = express();
 
 

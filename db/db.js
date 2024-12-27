@@ -1,3 +1,4 @@
+require('dotenv').config();
 const mysql =require('mysql2');
 const { connect } = require('../routes/rout_home');
 require('dotenv').config();
@@ -6,10 +7,10 @@ require('dotenv').config();
 class DB{
     constructor(){
         this.connect=mysql.connect({
-            host:'localhost',
-            user:'root',
-            database:'test2',
-            password:'',
+            host:process.env.HOST,
+            user:process.env.USER,
+            database:process.env.DATABASE,
+            password:process.env.PASSWORD,
         });
         this.connect.connect(err=>{
             if(err)throw err;
