@@ -28,7 +28,7 @@ app.set("view engine", 'hbs');
 // la carpeta estatica
 app.set('views', path.join(__dirname, 'views'));
 // app.set('views','views');
-app.use(express.static(`public`));
+app.use(express.static(path.join(__dirname,`public`)));
 // bootstrap
 app.use('/css/bootstrap.min.css', express.static(path.join(__dirname,'node_modules/bootstrap/dist/css/bootstrap.min.css')));
 app.use('/js/bootstrap.min.js', express.static(path.join(__dirname,'node_modules/bootstrap/dist/js/bootstrap.min.js')));
