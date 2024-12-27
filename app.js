@@ -1,4 +1,5 @@
 require ('dotenv').config();
+const path = require('path');
 // const evn = require('dotenv');
 const express = require('express');
 const hbsExpress = require('express-handlebars');
@@ -25,7 +26,7 @@ app.engine('hbs', hbs.engine);
 // aplicamos este engine
 app.set("view engine", 'hbs');
 // la carpeta estatica
-app.set('views', 'views');
+app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(`public`));
 // bootstrap
 app.use('/css/bootstrap.min.css', express.static('node_modules/bootstrap/dist/css/bootstrap.min.css'));
